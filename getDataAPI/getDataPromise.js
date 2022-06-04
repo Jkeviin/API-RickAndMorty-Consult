@@ -8,7 +8,7 @@ const getData = () => {
                 return response.json();
             }else if(response.status === 404) {
                 console.clear();
-                document.getElementById('infoCharacters').innerHTML = "";
+                document.getElementById('infoCharacters').innerHTML = `<h1 class="text-center">No results found</h1>`;
                 throw new Error("No se encontraron personajes");
             }else if(response.status === 500) {
                 console.clear();
